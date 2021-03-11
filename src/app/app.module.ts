@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
     AppComponent,
   ],
   imports: [
-    RouterModule.forRoot([{ path: 'first', loadChildren: () => import('./first/first.module').then(m => m.FirstModule) }]),
+    RouterModule.forRoot([{ path: 'first', loadChildren: () => import('./first/first.module').then(m => m.FirstModule) }], { relativeLinkResolution: 'legacy' }),
     BrowserModule.withServerTransition({ appId: 'serverApp' })
   ],
   providers: [],
